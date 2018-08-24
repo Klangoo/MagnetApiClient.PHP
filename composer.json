@@ -2,5 +2,10 @@
 	"name": "klangoo/magnetapiclient.php",
     "require": {
        
+    },
+	"autoload": {
+        "psr-0": {
+            "KlangooClient": "src/"
+        }
     }
 }
