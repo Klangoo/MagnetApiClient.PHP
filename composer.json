@@ -1,7 +1,16 @@
 {
 	"name": "klangoo/magnetapiclient.php",
+	"description": "Magnet API Client for PHP",
+    "type": "library",
+    "homepage": "https://github.com/Klangoo/MagnetApiClient.PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Magnet Team",
+            "email": "support@klangoo.com"
+        }
+    ],
     "require": {
-       
     },
 	"autoload": {
         "psr-0": {
