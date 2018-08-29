@@ -1,4 +1,4 @@
-# Magney API Client for PHP
+# Magnet API Client for PHP
 
 # Getting Started
 
