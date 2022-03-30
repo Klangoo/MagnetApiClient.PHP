@@ -46,7 +46,7 @@ require_once 'MagnetApiClient.PHP-master/klangooclient.php';
 <a name="usage"></a>
 # Usage
 
-This quick start tutorial will show you how to process a text
+This quick start tutorial will show you how to process a text.
 
 ## Initialize the client
 
@@ -77,10 +77,10 @@ $json = $client->CallWebMethod("ProcessDocument", $request, "POST");
 
 ## Known Issues/Fixes
 ### Curl SSL certificate problem
-Error: Curl error: SSL certificate problem: unable to get local issuer certificate 
+Error: Curl error: SSL certificate problem: unable to get local issuer certificate <br />
 Solution:
 1. Download certificate bundle [cacert.pem](https://curl.se/ca/cacert.pem)
 2. Add/Update the following lines in php.ini:
-curl.cainfo="<cacert_location>/cacert.pem"
+curl.cainfo="<cacert_location>/cacert.pem"<br />
 openssl.cafile="<cacert_location>/cacert.pem"
 
