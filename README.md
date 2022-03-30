@@ -77,10 +77,12 @@ $json = $client->CallWebMethod("ProcessDocument", $request, "POST");
 
 ## Known Issues/Fixes
 ### Curl SSL certificate problem
-Error: Curl error: SSL certificate problem: unable to get local issuer certificate <br />
-Solution:
+#### Error: 
+Curl error: SSL certificate problem: unable to get local issuer certificate
+
+#### Solution:
 1. Download certificate bundle [cacert.pem](https://curl.se/ca/cacert.pem)
-2. Add/Update the following lines in php.ini:
+2. Add/Update the following lines in php.ini:<br />
 curl.cainfo="<cacert_location>/cacert.pem"<br />
 openssl.cafile="<cacert_location>/cacert.pem"
 
