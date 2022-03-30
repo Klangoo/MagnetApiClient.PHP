@@ -1,12 +1,29 @@
-# Magnet API Client for PHP
+**This library allows you to easily use the Magnet API via PHP.**
 
-# Getting Started
+# Table of Contents
 
+* [About](#about)
+* [Installation](#installation)
+* [Usage](#usage)
 
+<a name="about"></a>
+# About
 
-## Supported platforms
+Klangoo NLP API is a natural language processing (NLP) service that uses the rule-based paradigm and machine learning to recognize the aboutness of text. The service recognizes the category of the text, extracts key disambiguated topics, places, people, brands, events, and 41 other types of names; analyzes text using tokenization, parts of speech, parsing, word sense disambiguation, named entity recognition; and automatically finds the relatedness score between documents.
 
-This library is compatible with PHP version 5.3 and later.
+[Read More](https://klangoosupport.zendesk.com/hc/en-us/categories/360000812171-Klangoo-Natural-Language-API).
+
+[Signup for a free trail](https://connect.klangoo.com/pub/Signup/)
+
+<a name="installation"></a>
+# Installation
+
+## Prerequisites
+
+- This library is compatible with PHP version 5.3 and later.
+- An API Key Provided by [Klangoo](https://klangoosupport.zendesk.com/hc/en-us/articles/360015236872-Step-2-Registering-to-Klangoo-NLP-API)
+- An API Secret Provided by [Klangoo](https://klangoosupport.zendesk.com/hc/en-us/articles/360015236872-Step-2-Registering-to-Klangoo-NLP-API)
+
 
 ## Install
 
@@ -26,11 +43,12 @@ If you don't use Composer, you can download the [package](https://github.com/Kla
 require_once 'MagnetApiClient.PHP-master/klangooclient.php';
 ```
 
-## Quick Start
+<a name="usage"></a>
+# Usage
 
 This quick start tutorial will show you how to process a text
 
-### Initialize the client
+## Initialize the client
 
 To begin, you will need to initialize the client. In order to do this you will need your API Key **CALK** and **Secret Key**.
 You can find both on [your Klangoo account](https://connect.klangoo.com/).
@@ -56,3 +74,13 @@ $request = array("text" => "Real Madrid transfer news",
 
 $json = $client->CallWebMethod("ProcessDocument", $request, "POST");
 ```
+
+## Known Issues/Fixes
+### Curl SSL certificate problem
+Error: Curl error: SSL certificate problem: unable to get local issuer certificate 
+Solution:
+1. Download certificate bundle [cacert.pem](https://curl.se/ca/cacert.pem)
+2. Add/Update the following lines in php.ini:
+curl.cainfo="<cacert_location>/cacert.pem"
+openssl.cafile="<cacert_location>/cacert.pem"
+
